@@ -13,6 +13,8 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      NODE_VERSION: null # Set by the step below
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v3
