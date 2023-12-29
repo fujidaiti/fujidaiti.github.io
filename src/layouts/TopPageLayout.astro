@@ -1,0 +1,18 @@
+---
+import type { NavigationTabLabel } from '@components/Navigation.astro'
+import PageLayout from '@layouts/PageLayout.astro'
+
+type Frontmatter = {
+  title: NavigationTabLabel
+}
+
+type Props = {
+  frontmatter: Frontmatter
+}
+
+const { title } = Astro.props.frontmatter
+---
+
+<PageLayout title={title} activeTab={title}>
+  <slot />
+</PageLayout>

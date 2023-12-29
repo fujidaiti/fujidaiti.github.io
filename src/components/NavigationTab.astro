@@ -1,0 +1,14 @@
+---
+export type Props = {
+  label: string
+  link: string
+  active: boolean
+}
+
+const { label, link, active } = Astro.props
+const style = active ? 'menu-item active' : 'menu-item'
+---
+
+<li>
+  <a class={style} href={link}>{label}</a>
+</li>

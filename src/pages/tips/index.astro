@@ -1,0 +1,18 @@
+---
+import PageLayout from '@layouts/PageLayout.astro'
+import { getCollection } from 'astro:content'
+
+const allTips = await getCollection('tips')
+---
+
+<PageLayout title='Tips' activeTab='Tips'>
+  <ul>
+    {
+      allTips.map((entry) => (
+        <li>
+          <a href={`/tips/${entry.slug}`}>{entry.data.title}</a>
+        </li>
+      ))
+    }
+  </ul>
+</PageLayout>
