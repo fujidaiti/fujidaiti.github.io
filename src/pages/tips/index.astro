@@ -10,7 +10,7 @@ const allTips = await getCollection('tips')
     {
       allTips.map((entry) => (
         <li>
-          <a href={`./tips/${entry.slug}`}>{entry.data.title}</a>
+          <a href={`/tips/${entry.slug}`}>{entry.data.title}</a>
         </li>
       ))
     }
