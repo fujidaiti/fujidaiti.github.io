@@ -3,45 +3,19 @@
 /* IBM Plex Sans JP (Regular, SemiBold) */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;600&display=swap');
 
-/* Monaspace Neon (Light) */
+/* Monaspace Neon (Variable Font) */
 @font-face {
-  font-family: 'Monaspace Neon';
-  src: url('/fonts/MonaspaceNeon-Light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
+  font-family: 'Monaspace Neon Var';
+  src: url('/fonts/MonaspaceNeon.woff2') format('woff2-variations');
   font-display: swap;
+  font-weight: 200 800;
+  font-style: oblique -11deg 0deg
 }
 
-/* Monaspace Neon (Regular) */
-@font-face {
-  font-family: 'Monaspace Neon';
-  src: url('/fonts/MonaspaceNeon-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Monaspace Neon (SemiBold) */
-@font-face {
-  font-family: 'Monaspace Neon';
-  src: url('/fonts/MonaspaceNeon-SemiBold.woff') format('woff');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Monaspace Neon - Italic (Regular) */
-@font-face {
-  font-family: 'Monaspace Neon';
-  src: url('/fonts/MonaspaceNeon-Italic.woff') format('woff');
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
 
 :root {
-  --font-stack: 'Monaspace Neon', 'IBM Plex Sans JP', sans-serif;
-  --mono-font-stack: 'Monaspace Neon', monospace;
+  --font-stack: 'Monaspace Neon Var', 'IBM Plex Sans JP', sans-serif;
+  --mono-font-stack: 'Monaspace Neon Var', monospace;
 }
 
 
