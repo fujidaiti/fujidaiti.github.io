@@ -3,6 +3,15 @@
 /* IBM Plex Sans JP (Regular, SemiBold) */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;600&display=swap');
 
+/* Monaspace Neon (Light, Regular, SemiBold) */
+@font-face {
+  font-family: 'Monaspace Neon';
+  src: url('/fonts/MonaspaceNeon-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 @font-face {
   font-family: 'Monaspace Neon';
   src: url('/fonts/MonaspaceNeon-Regular.woff') format('woff');
@@ -39,4 +48,8 @@ main {
 
 .astro-code {
   background-color: var(--background-color) !important;
+}
+
+code {
+  font-weight: 300;
 }
