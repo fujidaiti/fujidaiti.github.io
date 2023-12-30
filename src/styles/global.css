@@ -16,6 +16,7 @@
 :root {
   --font-stack: 'Monaspace Neon Var', 'IBM Plex Sans JP', sans-serif;
   --mono-font-stack: 'Monaspace Neon Var', monospace;
+  font-variant-ligatures: discretionary-ligatures;
 }
 
 
