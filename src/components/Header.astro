@@ -1,0 +1,21 @@
+---
+import type { NavigationTabLabel } from './Navigation.astro'
+import Navigation from './Navigation.astro'
+
+const siteName = 'norelease.dev'
+
+type Props = {
+  activeTab?: NavigationTabLabel
+}
+
+const { activeTab } = Astro.props
+---
+
+<div class='terminal-nav'>
+  <header class='terminal-logo'>
+    <div class='logo terminal-prompt'>
+      <a href='/'>{siteName}</a>
+    </div>
+  </header>
+  <Navigation activeTab={activeTab} />
+</div>

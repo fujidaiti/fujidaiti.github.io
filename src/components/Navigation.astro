@@ -1,0 +1,48 @@
+---
+import NavigationTab from './NavigationTab.astro'
+
+const tabs = [
+  {
+    label: 'Blog',
+    link: '/blog',
+  },
+  {
+    label: 'Technotes',
+    link: '/technotes',
+  },
+  {
+    label: 'Tips',
+    link: '/tips',
+  },
+  {
+    label: 'OSS',
+    link: '/oss',
+  },
+  {
+    label: 'About',
+    link: '/about',
+  },
+] as const
+
+export type NavigationTabLabel = (typeof tabs)[number]['label']
+
+type Props = {
+  activeTab?: NavigationTabLabel
+}
+
+const { activeTab } = Astro.props
+---
+
+<nav class='terminal-menu'>
+  <ul>
+    {
+      tabs.map((tab) => (
+        <NavigationTab
+          label={tab.label}
+          link={tab.link}
+          active={tab.label == activeTab}
+        />
+      ))
+    }
+  </ul>
+</nav>

@@ -1,0 +1,46 @@
+@import 'terminal.css';
+
+/* IBM Plex Sans JP (Regular, SemiBold) */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;600&display=swap');
+
+/* Monaspace Neon (Variable Font) */
+@font-face {
+  font-family: 'Monaspace Neon Var';
+  src: url('/fonts/MonaspaceNeon.woff2') format('woff2-variations');
+  font-display: swap;
+  font-weight: 200 800;
+  font-style: oblique -11deg 0deg
+}
+
+
+:root {
+  --font-stack: 'Monaspace Neon Var', 'IBM Plex Sans JP', sans-serif;
+  --mono-font-stack: 'Monaspace Neon Var', monospace;
+
+  /* 
+    Enable all the available ligatures for Monaspace.
+    See: https://monaspace.githubnext.com
+   */
+  font-feature-settings: 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'calt', 'dlig';
+}
+
+
+.container.root {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+main {
+  flex: 1;
+}
+
+.astro-code {
+  background-color: var(--background-color) !important;
+}
+
+code {
+  font-weight: 300;
+}

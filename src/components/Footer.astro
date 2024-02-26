@@ -1,0 +1,29 @@
+---
+const astroUrl = 'https://astro.build'
+const terminalCssUrl = 'https://terminalcss.xyz'
+const copyright = '2023 Daichi Fujita. All rights reserved.'
+---
+
+<footer>
+  <p>
+    Powered by <a href={astroUrl}>Astro</a> & <a href={terminalCssUrl}
+      >terminal.css</a
+    >
+  </p>
+  <p>
+    <span id='copyright-symbol'>&copy;</span>{copyright}
+  </p>
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+  }
+
+  #copyright-symbol {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+      'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+</style>
