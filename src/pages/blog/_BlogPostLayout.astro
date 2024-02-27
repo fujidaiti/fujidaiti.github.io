@@ -12,8 +12,5 @@ const { frontmatter } = Astro.props
 <PageLayout title={frontmatter.title} activeTab='Blog'>
   <h1>{frontmatter.title}</h1>
   <p>{frontmatter.pubDate.toDateString()}</p>
-  <p><em>{frontmatter.description}</em></p>
-  <p>Written by: {frontmatter.author}</p>
-  <img src={frontmatter.image.url} width='300' alt={frontmatter.image.alt} />
   <slot />
 </PageLayout>

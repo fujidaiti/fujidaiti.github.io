@@ -1,6 +1,5 @@
 ---
 title: SchedulerBinding.instance.schedulerPhaseを使う
-description: After learning some Astro, I couldn't stop!
 pubDate: 2023-12-29
 tags: [flutter]
 ---
