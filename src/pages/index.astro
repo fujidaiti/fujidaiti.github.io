@@ -9,7 +9,7 @@ const allTips = await getCollection('tips')
 const allBlogPosts = await getCollection('blog')
 const allPosts = [...allTips, ...allBlogPosts]
 
-allPosts.sort((x, y) => (x.data.pubDate < y.data.pubDate ? -1 : 1))
+allPosts.sort((x, y) => (x.data.pubDate < y.data.pubDate ? 1 : -1))
 ---
 
 <PageLayout title='norelease.dev'>
