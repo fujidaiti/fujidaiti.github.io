@@ -17,7 +17,7 @@ allPosts.sort((x, y) => (x.data.pubDate < y.data.pubDate ? -1 : 1))
     {
       allPosts.slice(0, maxPostsOnHome).map((post) => (
         <li>
-          <a href={`/tips/${post.slug}`}>{post.data.title}</a>
+          <a href={`/${post.collection}/${post.slug}`}>{post.data.title}</a>
         </li>
       ))
     }
