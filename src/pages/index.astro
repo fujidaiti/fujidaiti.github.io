@@ -1,0 +1,25 @@
+---
+import PageLayout from '@layouts/PageLayout.astro'
+import { getCollection } from 'astro:content'
+
+// The maximum number of posts to show on the home page.
+const maxPostsOnHome = 30
+
+const allTips = await getCollection('tips')
+const allBlogPosts = await getCollection('blog')
+const allPosts = [...allTips, ...allBlogPosts]
+
+allPosts.sort((x, y) => (x.data.pubDate < y.data.pubDate ? -1 : 1))
+---
+
+<PageLayout title='norelease.dev'>
+  <ul>
+    {
+      allPosts.slice(0, maxPostsOnHome).map((post) => (
+        <li>
+          <a href={`/tips/${post.slug}`}>{post.data.title}</a>
+        </li>
+      ))
+    }
+  </ul>
+</PageLayout>
